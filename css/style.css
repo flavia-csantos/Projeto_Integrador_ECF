@@ -1,0 +1,186 @@
+/* Importação da fonte externa 'Poppins' do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;1,400&display=swap");
+
+/* Reset Global: Aplica regras fundamentais a TODOS os elementos (*) */
+* {
+  margin: 0; /* Remove margens padrão dos navegadores */
+  padding: 0; /* Remove espaçamentos internos padrão */
+  box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho total do elemento */
+  font-family:
+    "Poppins", sans-serif; /* Define Poppins como a fonte padrão do site */
+}
+
+/* Variáveis CSS (:root) - Centralização de cores, fontes e medidas */
+:root {
+  /* Paleta de cores do projeto */
+  --white-color: #ffffff;
+  --dark-color: #1a252c;
+  --primary-color: #2d6a4f;
+  --secondary-color: #40916c;
+  --green: #23c479;
+  --light-gray-color: #f4f6f8;
+  --medium-gray-color: #5c6b73;
+
+  /* Escala de tamanhos de fonte */
+  --font-size-s: 0.9rem;
+  --font-size-n: 1rem;
+  --font-size-m: 1.12rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.3rem;
+
+  /* Pesos/Espessuras da fonte */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Raios de arredondamento de bordas */
+  --border-radius-s: 8px;
+  --border-radius-m: 30px;
+  --border-circle: 50%;
+
+  /* Largura máxima do conteúdo da página */
+  --site-max-width: 1300px;
+}
+
+/* Reset de elementos específicos */
+
+/* Remove os marcadores/bolinhas de listas */
+ul {
+  list-style: none;
+}
+
+/* Remove o sublinhado padrão dos links */
+a {
+  text-decoration: none;
+}
+
+/* Limpa o estilo nativo de botões */
+button {
+  border: none; /* Remove borda padrão */
+  outline: none; /* Remove contorno ao focar */
+  cursor: pointer; /* Altera o cursor para a mãozinha clicável */
+}
+
+/* Regras padrão para imagens */
+img {
+  max-width: 100%; /* Impede que a imagem ultrapasse a largura do container pai */
+}
+
+/* Container de largura máxima centralizado */
+.section-content {
+  margin: 0 auto; /* Centraliza o bloco na horizontal */
+  padding: 0 20px; /* Adiciona recuo lateral para telas menores */
+  max-width: var(--site-max-width); /* Limita a largura em 1300px */
+}
+
+/* Cabeçalho Fixado */
+header {
+  position: fixed; /* Mantém o menu sempre visível no topo da tela */
+  width: 100%; /* Garante que o menu ocupe toda a largura */
+  z-index: 5; /* Mantém o cabeçalho acima dos outros elementos */
+  background: var(--primary-color); /* Cor verde de fundo da barra */
+}
+
+/* Barra de Navegação */
+header .navbar {
+  display: flex; /* Alinha logo e menu lado a lado */
+  padding: 20px; /* Espaçamento interno */
+  align-items: center; /* Alinha os itens na vertical ao centro */
+  justify-content: space-between; /* Empurra a logo para a esquerda e o menu para a direita */
+}
+
+/* Texto do Logo */
+.navbar .nav-logo .logo-text {
+  color: var(--white-color);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Menu de Links */
+.navbar .nav-menu {
+  display: flex; /* Coloca os links em fila horizontal */
+  align-items: center; /* Alinha os links verticalmente */
+  gap: 25px; /* Espaçamento individual entre cada link do menu */
+}
+
+/* Links do Menu */
+.navbar .nav-menu .nav-link {
+  padding: 10px 18px; /* Área de clique estendida ao redor do texto */
+  color: var(--white-color);
+  font-size: var(--font-size-m);
+  border-radius: var(
+    --border-radius-m
+  ); /* Arredonda os cantos no estado hover */
+  transition: 0.3s ease; /* Transição suave de cores */
+}
+
+/* Estado de Hover dos Links do Menu */
+.navbar .nav-menu .nav-link:hover {
+  color: var(--primary-color); /* Texto passa para o verde principal */
+  background: var(--light-gray-color); /* Fundo fica cinza claro */
+}
+
+/* Seção Hero principal */
+.hero-section {
+  min-height: 100vh; /* Garante que a seção cubra toda a altura da tela */
+  background: var(--primary-color); /* Fundo verde principal */
+}
+
+/* Alinhamento do conteúdo dentro da Hero */
+.hero-section .section-content {
+  display: flex; /* Exibe texto e imagem lado a lado */
+  align-items: center; /* Centraliza verticalmente texto e imagem */
+  min-height: 100vh; /* Garante a altura total da janela */
+  color: var(--white-color); /* Define cor base branca para textos */
+  justify-content: space-between; /* Distribui espaço entre o bloco de texto e a imagem */
+}
+
+/* Título Principal */
+.hero-section .hero-details .title {
+  font-size: var(--font-size-xxl);
+  color: var(--green); /* Destaque em verde claro */
+  font-family:
+    Arial, Helvetica, sans-serif; /* Fonte personalizada para o título */
+}
+
+/* Parágrafo de Descrição */
+.hero-section .hero-details .description {
+  max-width: 580px; /* Limita a largura para garantir leitura confortável */
+  margin: 24px 0 40px; /* Margem: 24px acima, 0 nas laterais, 40px abaixo */
+  font-size: var(--font-size-m);
+  line-height: 1.6; /* Espaçamento entre as linhas do parágrafo */
+  text-wrap: balance; /* Distribui o texto de forma equilibrada entre as linhas */
+}
+
+/* Wrapper dos Botões da Hero */
+.hero-section .hero-details .buttons {
+  display: flex; /* Mantém os dois botões alinhados lado a lado */
+  gap: 23px; /* Distância de 23px entre os botões */
+}
+
+/* Estilo do Botão */
+.hero-section .hero-details .button {
+  display: inline-block; /* Permite ao link <a> aceitar padding e dimensões completas */
+  padding: 10px 26px; /* Espaçamento interno */
+  border: 2px solid transparent; /* Reserva espaço para a borda no hover (evita que o botão mexa de tamanho) */
+  color: var(--light-gray-color);
+  border-radius: var(--border-radius-m); /* Formato estilo pílula */
+  background: var(--secondary-color); /* Verde secundário */
+  font-weight: var(--font-weight-medium);
+  transition: 0.3s ease; /* Transição suave para o efeito hover */
+}
+
+/* Efeito Hover do Botão */
+.hero-section .hero-details .button:hover {
+  color: var(--white-color); /* Cor do texto muda para branco */
+  border-color: var(--white-color); /* Borda branca visível */
+  background: transparent; /* Fundo fica transparente */
+}
+
+/* Wrapper da Imagem da Hero */
+.hero-section .hero-image-wrapper {
+  max-width: 800px; /* Limita a largura máxima da imagem */
+  margin-right: 60px; /* Afasta a imagem da borda direita */
+}
