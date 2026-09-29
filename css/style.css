@@ -184,3 +184,11 @@ header .navbar {
   max-width: 800px; /* Limita a largura máxima da imagem */
   margin-right: 60px; /* Afasta a imagem da borda direita */
 }
+
+@media(min-width: 1400px){
+  .container-principal{
+    min-height: 92vh;
+  }
+}
+/*Obs: não inserir nenhum código abaixo.
+*/
